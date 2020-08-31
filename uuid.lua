@@ -59,6 +59,13 @@ do
 	end
 end
 
+if not ... then
+	math.randomseed(require'time'.clock())
+	for i=1,10 do
+		print(_M.generate_v4())
+	end
+end
+
 return setmetatable(_M, {
 	__call = _M.generate_v4
 })
