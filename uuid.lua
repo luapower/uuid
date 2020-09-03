@@ -65,6 +65,9 @@ if not ... then
 		math.randomseed(require'time'.clock())
 		for i = 1, 1e6 do
 			local uuid = _M.generate_v4()
+			if i == 1 then
+				print(uuid)
+			end
 			assert(not t[uuid])
 			t[uuid] = true
 		end
